@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  php-apache:
+    image: php:8.2-apache
+    container_name: php_app
+    volumes:
+      - ./app:/var/www/html
+    ports:
+      - '8080:80'
+    environment:
+      - APACHE_RUN_USER=#1000
+      - APACHE_RUN_GROUP=#1000
+    restart: always

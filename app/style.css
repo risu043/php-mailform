@@ -1,0 +1,141 @@
+body {
+  background-color: #efefef;
+}
+
+.comment-form {
+  box-shadow: 0 6px 13px -3px rgba(0, 12, 66, 0.1),
+    0 0 1px rgba(0, 30, 100, 0.1);
+  background-color: #fff;
+  color: #111;
+  margin: 40px;
+  border-radius: 8px;
+  padding: 40px;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.comment-form__title {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.comment-form__row {
+  margin: 12px 0 24px;
+}
+
+.comment-form__label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.comment-form__input {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.comment-form__textarea {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.comment-form__submit-row {
+  margin: 12px 0 24px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.comment-form__submit {
+  background-color: transparent;
+  border: 1px solid #4891bd;
+  border-radius: 12px;
+  color: #4891bd;
+  padding: 8px 24px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.comment-form__submit-back {
+  background-color: #4891bd;
+  border: 1px solid #4891bd;
+  border-radius: 12px;
+  color: #fff;
+  padding: 8px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 4px;
+}
+
+.comment-form__submit:hover {
+  background-color: #4891bd;
+  color: #fff;
+}
+.comment-form__submit-back:hover {
+  background-color: #fff;
+  color: #4891bd;
+}
+
+table {
+  border-collapse: collapse;
+  border: solid 1px #cedce6;
+  width: 100%;
+  table-layout: fixed;
+  margin-left: 10px;
+  text-align: left;
+  font-size: 15px;
+}
+
+table th,
+table td {
+  border: solid 1px #cedce6;
+}
+
+table th {
+  background: #edf2f6; /*背景色*/
+  padding: 8px 10px;
+}
+
+table td {
+  padding: 8px 10px;
+}
+
+.steps ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: fit-content;
+  margin-inline: auto;
+}
+.steps ul li {
+  list-style: none;
+  text-align: center;
+  display: grid;
+  place-content: center;
+  height: 40px;
+  width: 40px;
+  border: 1px solid #c1e3ff;
+  border-radius: 50px;
+  position: relative;
+}
+.current {
+  background-color: #c1e3ff;
+  color: #fff;
+}
+.steps li:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: -19px;
+  top: 50%;
+  transform: translateY(-50%);
+  clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+  background: #efefef;
+  width: 13px;
+  height: 18px;
+}
